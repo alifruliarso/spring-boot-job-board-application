@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{layout}">
+    <head>
+        <title>[[#{jobPost.add.headline}]]</title>
+    </head>
+    <body>
+        <div layout:fragment="content">
+            <div class="d-flex flex-wrap mb-4">
+                <h1 class="flex-grow-1">[[#{jobPost.add.headline}]]</h1>
+                <div>
+                    <a th:href="@{/jobs}" class="btn btn-secondary">[[#{jobPost.add.back}]]</a>
+                </div>
+            </div>
+            <div th:replace="~{fragments/forms::globalErrors('jobPost')}" />
+            <form th:action="${requestUri}" method="post" novalidate="">
+                <div th:replace="~{fragments/forms::inputRow(object='jobPost', field='title', required=true)}" />
+                <div th:replace="~{fragments/forms::inputRow(object='jobPost', field='description', required=true, type='textarea')}" />
+                <div th:replace="~{fragments/forms::inputRow(object='jobPost', field='jobType', required=true, type='select')}" />
+                <div th:replace="~{fragments/forms::inputRow(object='jobPost', field='maximumMonthlySalary', required=true, type='number')}" />
+                <div th:replace="~{fragments/forms::inputRow(object='jobPost', field='datePosted', required=true, inputClass='js-datetimepicker')}" />
+                <div th:replace="~{fragments/forms::inputRow(object='jobPost', field='companyId', required=true, type='select')}" />
+                <div th:replace="~{fragments/forms::inputRow(object='jobPost', field='workModel', required=true, type='radio')}" />
+                <div th:replace="~{fragments/forms::inputRow(object='jobPost', field='location')}" />
+                <div th:replace="~{fragments/forms::inputRow(object='jobPost', field='applyUrl')}" />
+                <input type="submit" th:value="#{jobPost.add.headline}" class="btn btn-primary mt-4" />
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    xmlns:sec="http://www.thymeleaf.org/extras/spring-security" layout:decorate="~{layout}">
+
+<head>
+    <title>[[#{jobPost.list.headline}]]</title>
+    <style type="text/css">
+        .page-header {
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+            padding: 30px 0;
+            margin-bottom: 30px;
+            border-radius: 0 0 12px 12px;
+        }
+
+        .navbar-custom {
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+        }
+
+        .job-card {
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border: none;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .job-tag {
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-right: 8px;
+            display: inline-block;
+        }
+
+        .job-type {
+            background: #e8f4fd;
+            color: #2980b9;
+        }
+
+        .salary {
+            background: #e6f7ee;
+            color: #27ae60;
+        }
+
+        .work-mode {
+            background: #fef7e0;
+            color: #f39c12;
+        }
+
+        .company-logo {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            font-size: 16px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .job-title-link {
+            text-decoration: none;
+            color: #2c3e50;
+            transition: all 0.3s ease;
+        }
+
+        .job-title-link:hover {
+            color: #3498db;
+        }
+
+        .filter-card {
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border: none;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+            padding: 40px 0;
+            margin-top: 40px;
+        }
+
+        .pagination-custom .page-link {
+            color: #2c3e50;
+            border-radius: 8px;
+            margin: 0 5px;
+            border: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .pagination-custom .page-item.active .page-link {
+            background: #3498db;
+            color: white;
+            border: none;
+        }
+
+        .search-box {
+            background: white;
+            border-radius: 50px;
+            padding: 10px 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div layout:fragment="content">
+        <!-- Page Header -->
+        <div class="page-header row mb-4">
+            <div class="col-md-8">
+                <h1 class="fw-bold">Find Your Dream Job</h1>
+                <p class="fs-3">Browse through our latest job openings
+                </p>
+            </div>
+            <div sec:authorize="hasRole('ADMIN')" class="col-md-4 text-md-end action-buttons mt-3 mt-md-0">
+                <a sec:authorize="hasRole('ADMIN')" th:href="@{/jobs/add}"
+                    class="btn btn-create btn-lg text-white me-2"><i class="bi bi-plus-circle me-1"></i>
+                    [[#{jobPost.list.createNew}]]</a>
+                <a sec:authorize="hasRole('ADMIN')" th:href="@{/jobs/generateDemoData}"
+                    class="btn btn-generate btn-lg text-white me-2"><i class="bi bi-database-add me-1"></i>
+                    Generate Demo Jobs</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Filters Sidebar -->
+            <div class="col-lg-3">
+                <form th:action="@{/jobs}" method="get">
+                    <div class="filter-card card p-3 mb-4">
+                        <div class="input-group">
+                            <span class="input-group-text bg-transparent border-0">
+                                <i class="bi bi-search"></i>
+                            </span>
+                            <input type="text" name="searchSkill" th:value="${searchSkill}"
+                                class="form-control border-0 bg-transparent" placeholder="Skill...">
+                            <button class="btn btn-primary">Search</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Job Listings -->
+            <div class="col-lg-9">
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                    <div th:each="jobPost : ${jobPosts}" class="col">
+                        <div class="card job-card h-100">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div class="company-logo"><img
+                                            th:src="@{https://ui-avatars.com/api/?name={name}(name=${jobPost.company.name})}"
+                                            alt="Company Logo" width="32" height="32" class="rounded-circle me-2"></div>
+                                </div>
+                                <h5 class="card-title">
+                                    <a th:text="${jobPost.title}" th:href="@{/jobs/view/{id}(id=${jobPost.id})}"
+                                        class="job-title-link">Developer</a>
+                                </h5>
+                                <p class="card-text mb-2">
+                                    <a href="#" class="text-decoration-none"><span
+                                            th:text="${jobPost.company.name}">jobType</span></a>
+                                </p>
+                                <div class="mb-3">
+                                    <span th:text="${jobPost.jobType}" class="job-tag job-type">jobType</span>
+                                    <!-- <span class="job-tag salary">$7,000 - $9,000</span> -->
+                                    <span th:text="${jobPost.workModel}" class="job-tag work-mode">Hybrid</span>
+                                </div>
+                                <p class="card-text text-muted small">
+                                    <i th:text="${jobPost.location}" class="bi bi-geo-alt me-1">
+                                    </i>
+                                </p>
+                                <p th:text="${#strings.abbreviate(jobPost.description, 150)}" class="card-text"></p>
+                                <div class="d-flex justify-content-between align-items-center action-buttons">
+                                    <span class="text-muted small"></span>
+                                    <a sec:authorize="!hasRole('ADMIN')" th:href="@{/jobs/view/{id}(id=${jobPost.id})}"
+                                        class="btn btn-lg btn-primary">View Details</a>
+                                    <a sec:authorize="hasRole('ADMIN')" th:href="@{/jobs/edit/{id}(id=${jobPost.id})}"
+                                        class="btn btn-lg btn-primary"><i class="bi bi-pencil-square"></i> Edit</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            window.setTimeout(function () {
+                $(".alert")
+                    .fadeTo(500, 0)
+                    .slideUp(500, function () {
+                        $(this).remove();
+                    });
+            }, 2000);
+        </script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+    <div th:fragment="skillsDiv">
+        <div class="form-check">
+            <div class="skills-container">
+                <span th:each="item : ${extractedSkills}" th:text="${item.name}" class="skill-tag"></span>
+            </div>
+            <input type="hidden" name="skillsIds" th:each="item, iterStat : ${extractedSkills}" th:value="${item.id}" />
+        </div>
+    </div>
+</body>
+
+</html>

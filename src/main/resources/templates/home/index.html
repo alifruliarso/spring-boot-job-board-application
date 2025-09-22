@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorate="~{layout}">
+
+<head>
+    <title>[[#{home.index.headline}]]</title>
+    <style>
+        /* body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        } */
+
+        .welcome-container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            max-width: 800px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .welcome-header {
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .welcome-logo {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+        }
+
+        .welcome-title {
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .welcome-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .welcome-content {
+            padding: 40px;
+        }
+
+        .welcome-section {
+            margin-bottom: 30px;
+        }
+
+        .welcome-section-title {
+            color: #2c3e50;
+            font-weight: 600;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f1f8ff;
+        }
+
+        .feature-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #f1f8ff;
+            /* display: flex; */
+            align-items: center;
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-icon {
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 12px;
+        }
+
+        .stat-item {
+            padding: 0 15px;
+        }
+
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #3498db;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        .welcome-footer {
+            text-align: center;
+            padding: 20px;
+            color: #6c757d;
+            font-size: 0.9rem;
+            border-top: 1px solid #f1f8ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div layout:fragment="content">
+        <div class="welcome-container mx-auto">
+            <div class="welcome-header">
+                <div class="welcome-logo">
+                    <i class="bi bi-briefcase-fill"></i>
+                </div>
+                <h1 class="welcome-title">Welcome to JobPortal</h1>
+                <p class="welcome-subtitle">Your career journey begins here</p>
+            </div>
+
+            <div class="welcome-content">
+                <div class="welcome-section">
+                    <h3 class="welcome-section-title">Use the navigation bar above to get started.</h3>
+                </div>
+
+                <div class="welcome-section">
+                    <ul class="feature-list">
+                        <li>
+                            <div>
+                                As an <strong>administrator</strong>, you can manage Companies and Job Posts.
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                You can also explore the public Job Posts without logging in.
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                We have also integrated <strong>AI</strong> features to help you <strong>generate job
+                                    skills</strong> from description.
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                We have pre-seeded some sample data to help you get started.
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                We have also pre-setup <strong>default users</strong> for you to login.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

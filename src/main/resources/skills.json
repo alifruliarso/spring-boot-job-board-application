@@ -1,0 +1,802 @@
+[
+    {
+        "id": 1,
+        "name": "Python"
+    },
+    {
+        "id": 2,
+        "name": "Java"
+    },
+    {
+        "id": 3,
+        "name": "JavaScript"
+    },
+    {
+        "id": 4,
+        "name": "C++"
+    },
+    {
+        "id": 5,
+        "name": "SQL"
+    },
+    {
+        "id": 6,
+        "name": "NoSQL"
+    },
+    {
+        "id": 7,
+        "name": "Linux"
+    },
+    {
+        "id": 8,
+        "name": "AWS"
+    },
+    {
+        "id": 9,
+        "name": "Azure"
+    },
+    {
+        "id": 10,
+        "name": "Google Cloud"
+    },
+    {
+        "id": 11,
+        "name": "Docker"
+    },
+    {
+        "id": 12,
+        "name": "Kubernetes"
+    },
+    {
+        "id": 13,
+        "name": "React"
+    },
+    {
+        "id": 14,
+        "name": "Node.js"
+    },
+    {
+        "id": 15,
+        "name": "Angular"
+    },
+    {
+        "id": 16,
+        "name": "Machine Learning"
+    },
+    {
+        "id": 17,
+        "name": "Artificial Intelligence"
+    },
+    {
+        "id": 18,
+        "name": "TensorFlow"
+    },
+    {
+        "id": 19,
+        "name": "PyTorch"
+    },
+    {
+        "id": 20,
+        "name": "Big Data"
+    },
+    {
+        "id": 21,
+        "name": "Hadoop"
+    },
+    {
+        "id": 22,
+        "name": "Apache Spark"
+    },
+    {
+        "id": 23,
+        "name": "Git"
+    },
+    {
+        "id": 24,
+        "name": "CI/CD"
+    },
+    {
+        "id": 25,
+        "name": "Jenkins"
+    },
+    {
+        "id": 26,
+        "name": "API Development"
+    },
+    {
+        "id": 27,
+        "name": "RESTful Services"
+    },
+    {
+        "id": 28,
+        "name": "Microservices"
+    },
+    {
+        "id": 29,
+        "name": "Agile Methodologies"
+    },
+    {
+        "id": 30,
+        "name": "Scrum"
+    },
+    {
+        "id": 31,
+        "name": "Data Science"
+    },
+    {
+        "id": 32,
+        "name": "Data Visualization"
+    },
+    {
+        "id": 33,
+        "name": "Business Intelligence"
+    },
+    {
+        "id": 34,
+        "name": "Cybersecurity"
+    },
+    {
+        "id": 35,
+        "name": "Ethical Hacking"
+    },
+    {
+        "id": 36,
+        "name": "Penetration Testing"
+    },
+    {
+        "id": 37,
+        "name": "Network Security"
+    },
+    {
+        "id": 38,
+        "name": "Cloud Security"
+    },
+    {
+        "id": 39,
+        "name": "DevOps"
+    },
+    {
+        "id": 40,
+        "name": "Software Testing"
+    },
+    {
+        "id": 41,
+        "name": "Automation Testing"
+    },
+    {
+        "id": 42,
+        "name": "Selenium"
+    },
+    {
+        "id": 43,
+        "name": "Mobile Development"
+    },
+    {
+        "id": 44,
+        "name": "iOS Development"
+    },
+    {
+        "id": 45,
+        "name": "Android Development"
+    },
+    {
+        "id": 46,
+        "name": "Swift"
+    },
+    {
+        "id": 47,
+        "name": "Objective-C"
+    },
+    {
+        "id": 48,
+        "name": "Cross-platform Development"
+    },
+    {
+        "id": 49,
+        "name": "Flutter"
+    },
+    {
+        "id": 50,
+        "name": "React Native"
+    },
+    {
+        "id": 51,
+        "name": "HTML"
+    },
+    {
+        "id": 52,
+        "name": "CSS"
+    },
+    {
+        "id": 53,
+        "name": "Vue.js"
+    },
+    {
+        "id": 54,
+        "name": "TypeScript"
+    },
+    {
+        "id": 55,
+        "name": "GraphQL"
+    },
+    {
+        "id": 56,
+        "name": "MongoDB"
+    },
+    {
+        "id": 57,
+        "name": "Redis"
+    },
+    {
+        "id": 58,
+        "name": "PostgreSQL"
+    },
+    {
+        "id": 59,
+        "name": "Oracle Database"
+    },
+    {
+        "id": 60,
+        "name": "MySQL"
+    },
+    {
+        "id": 61,
+        "name": "SQLite"
+    },
+    {
+        "id": 62,
+        "name": "Apache Kafka"
+    },
+    {
+        "id": 63,
+        "name": "RabbitMQ"
+    },
+    {
+        "id": 64,
+        "name": "ElasticSearch"
+    },
+    {
+        "id": 65,
+        "name": "Data Warehousing"
+    },
+    {
+        "id": 66,
+        "name": "Tableau"
+    },
+    {
+        "id": 67,
+        "name": "Power BI"
+    },
+    {
+        "id": 68,
+        "name": "Natural Language Processing"
+    },
+    {
+        "id": 69,
+        "name": "Computer Vision"
+    },
+    {
+        "id": 70,
+        "name": "Robotics"
+    },
+    {
+        "id": 71,
+        "name": "Embedded Systems"
+    },
+    {
+        "id": 72,
+        "name": "Internet of Things (IoT)"
+    },
+    {
+        "id": 73,
+        "name": "Blockchain"
+    },
+    {
+        "id": 74,
+        "name": "Smart Contracts"
+    },
+    {
+        "id": 75,
+        "name": "Cryptography"
+    },
+    {
+        "id": 76,
+        "name": "Project Management"
+    },
+    {
+        "id": 77,
+        "name": "Leadership"
+    },
+    {
+        "id": 78,
+        "name": "Communication"
+    },
+    {
+        "id": 79,
+        "name": "Teamwork"
+    },
+    {
+        "id": 80,
+        "name": "Problem Solving"
+    },
+    {
+        "id": 81,
+        "name": "Critical Thinking"
+    },
+    {
+        "id": 82,
+        "name": "Time Management"
+    },
+    {
+        "id": 83,
+        "name": "Adaptability"
+    },
+    {
+        "id": 84,
+        "name": "Creativity"
+    },
+    {
+        "id": 85,
+        "name": "Analytical Skills"
+    },
+    {
+        "id": 86,
+        "name": "Customer Service"
+    },
+    {
+        "id": 87,
+        "name": "Product Management"
+    },
+    {
+        "id": 88,
+        "name": "Quality Assurance"
+    },
+    {
+        "id": 89,
+        "name": "Business Analysis"
+    },
+    {
+        "id": 90,
+        "name": "Requirements Gathering"
+    },
+    {
+        "id": 91,
+        "name": "Enterprise Architecture"
+    },
+    {
+        "id": 92,
+        "name": "System Design"
+    },
+    {
+        "id": 93,
+        "name": "Software Architecture"
+    },
+    {
+        "id": 94,
+        "name": "Design Patterns"
+    },
+    {
+        "id": 95,
+        "name": "UML"
+    },
+    {
+        "id": 96,
+        "name": "Docker Swarm"
+    },
+    {
+        "id": 97,
+        "name": "Ansible"
+    },
+    {
+        "id": 98,
+        "name": "Terraform"
+    },
+    {
+        "id": 99,
+        "name": "Puppet"
+    },
+    {
+        "id": 100,
+        "name": "Nagios"
+    },
+    {
+        "id": 101,
+        "name": "Prometheus"
+    },
+    {
+        "id": 102,
+        "name": "Grafana"
+    },
+    {
+        "id": 103,
+        "name": "Logstash"
+    },
+    {
+        "id": 104,
+        "name": "Kibana"
+    },
+    {
+        "id": 105,
+        "name": "Splunk"
+    },
+    {
+        "id": 106,
+        "name": "OpenShift"
+    },
+    {
+        "id": 107,
+        "name": "CloudFormation"
+    },
+    {
+        "id": 108,
+        "name": "Serverless Architecture"
+    },
+    {
+        "id": 109,
+        "name": "Functional Programming"
+    },
+    {
+        "id": 110,
+        "name": "Scala"
+    },
+    {
+        "id": 111,
+        "name": "Elixir"
+    },
+    {
+        "id": 112,
+        "name": "Erlang"
+    },
+    {
+        "id": 113,
+        "name": "Rust"
+    },
+    {
+        "id": 114,
+        "name": "Go"
+    },
+    {
+        "id": 115,
+        "name": "Perl"
+    },
+    {
+        "id": 116,
+        "name": "PHP"
+    },
+    {
+        "id": 117,
+        "name": "Shell Scripting"
+    },
+    {
+        "id": 118,
+        "name": "PowerShell"
+    },
+    {
+        "id": 119,
+        "name": "MATLAB"
+    },
+    {
+        "id": 120,
+        "name": "SAS"
+    },
+    {
+        "id": 121,
+        "name": "JIRA"
+    },
+    {
+        "id": 122,
+        "name": "Confluence"
+    },
+    {
+        "id": 123,
+        "name": "Slack"
+    },
+    {
+        "id": 124,
+        "name": "Trello"
+    },
+    {
+        "id": 125,
+        "name": "Asana"
+    },
+    {
+        "id": 126,
+        "name": "Microsoft Azure DevOps"
+    },
+    {
+        "id": 127,
+        "name": "Google Analytics"
+    },
+    {
+        "id": 128,
+        "name": "SEO"
+    },
+    {
+        "id": 129,
+        "name": "Content Management Systems (CMS)"
+    },
+    {
+        "id": 130,
+        "name": "WordPress"
+    },
+    {
+        "id": 131,
+        "name": "Drupal"
+    },
+    {
+        "id": 132,
+        "name": "Magento"
+    },
+    {
+        "id": 133,
+        "name": "Shopify"
+    },
+    {
+        "id": 134,
+        "name": "Adobe Photoshop"
+    },
+    {
+        "id": 135,
+        "name": "Adobe Illustrator"
+    },
+    {
+        "id": 136,
+        "name": "Adobe XD"
+    },
+    {
+        "id": 137,
+        "name": "Figma"
+    },
+    {
+        "id": 138,
+        "name": "Sketch"
+    },
+    {
+        "id": 139,
+        "name": "UI/UX Design"
+    },
+    {
+        "id": 140,
+        "name": "Wireframing"
+    },
+    {
+        "id": 141,
+        "name": "Prototyping"
+    },
+    {
+        "id": 142,
+        "name": "Network Administration"
+    },
+    {
+        "id": 143,
+        "name": "System Administration"
+    },
+    {
+        "id": 144,
+        "name": "Virtualization"
+    },
+    {
+        "id": 145,
+        "name": "VMware"
+    },
+    {
+        "id": 146,
+        "name": "Hyper-V"
+    },
+    {
+        "id": 147,
+        "name": "Citrix"
+    },
+    {
+        "id": 148,
+        "name": "TCP/IP"
+    },
+    {
+        "id": 149,
+        "name": "DNS"
+    },
+    {
+        "id": 150,
+        "name": "DHCP"
+    },
+    {
+        "id": 151,
+        "name": "Firewall Management"
+    },
+    {
+        "id": 152,
+        "name": "Load Balancing"
+    },
+    {
+        "id": 153,
+        "name": "Content Delivery Network (CDN)"
+    },
+    {
+        "id": 154,
+        "name": "Elastic Load Balancing (ELB)"
+    },
+    {
+        "id": 155,
+        "name": "Redis Cluster"
+    },
+    {
+        "id": 156,
+        "name": "Apache Cassandra"
+    },
+    {
+        "id": 157,
+        "name": "Google BigQuery"
+    },
+    {
+        "id": 158,
+        "name": "Apache Flink"
+    },
+    {
+        "id": 159,
+        "name": "Apache NiFi"
+    },
+    {
+        "id": 160,
+        "name": "Backup and Recovery"
+    },
+    {
+        "id": 161,
+        "name": "Disaster Recovery Planning"
+    },
+    {
+        "id": 162,
+        "name": "Data Governance"
+    },
+    {
+        "id": 163,
+        "name": "Data Privacy"
+    },
+    {
+        "id": 164,
+        "name": "Information Security"
+    },
+    {
+        "id": 165,
+        "name": "Incident Response"
+    },
+    {
+        "id": 166,
+        "name": "Security Information and Event Management (SIEM)"
+    },
+    {
+        "id": 167,
+        "name": "Penetration Testing Tools"
+    },
+    {
+        "id": 168,
+        "name": "Metasploit"
+    },
+    {
+        "id": 169,
+        "name": "Burp Suite"
+    },
+    {
+        "id": 170,
+        "name": "Nmap"
+    },
+    {
+        "id": 171,
+        "name": "Wireshark"
+    },
+    {
+        "id": 172,
+        "name": "Vulnerability Assessment"
+    },
+    {
+        "id": 173,
+        "name": "Cloud Architecture"
+    },
+    {
+        "id": 174,
+        "name": "ISO/IEC 27001"
+    },
+    {
+        "id": 175,
+        "name": "GDPR Compliance"
+    },
+    {
+        "id": 176,
+        "name": "HIPAA Compliance"
+    },
+    {
+        "id": 177,
+        "name": "Business Continuity Planning"
+    },
+    {
+        "id": 178,
+        "name": "Quality Management"
+    },
+    {
+        "id": 179,
+        "name": "Lean Six Sigma"
+    },
+    {
+        "id": 180,
+        "name": "Kanban"
+    },
+    {
+        "id": 181,
+        "name": "Risk Management"
+    },
+    {
+        "id": 182,
+        "name": "Financial Analysis"
+    },
+    {
+        "id": 183,
+        "name": "Negotiation"
+    },
+    {
+        "id": 184,
+        "name": "Public Speaking"
+    },
+    {
+        "id": 185,
+        "name": "Technical Writing"
+    },
+    {
+        "id": 186,
+        "name": "Documentation"
+    },
+    {
+        "id": 187,
+        "name": "Training and Development"
+    },
+    {
+        "id": 188,
+        "name": "Customer Relationship Management (CRM)"
+    },
+    {
+        "id": 189,
+        "name": "Salesforce"
+    },
+    {
+        "id": 190,
+        "name": "SAP"
+    },
+    {
+        "id": 191,
+        "name": "Oracle ERP"
+    },
+    {
+        "id": 192,
+        "name": "Human Resources Information System (HRIS)"
+    },
+    {
+        "id": 193,
+        "name": "Recruitment"
+    },
+    {
+        "id": 194,
+        "name": "Employee Relations"
+    },
+    {
+        "id": 195,
+        "name": "Performance Management"
+    },
+    {
+        "id": 196,
+        "name": "Training Needs Analysis"
+    },
+    {
+        "id": 197,
+        "name": "Learning Management System (LMS)"
+    },
+    {
+        "id": 198,
+        "name": "Change Management"
+    },
+    {
+        "id": 199,
+        "name": "Organizational Development"
+    },
+    {
+        "id": 200,
+        "name": "Conflict Resolution"
+    }
+]

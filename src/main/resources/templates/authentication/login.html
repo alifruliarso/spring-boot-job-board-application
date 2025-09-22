@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorate="~{layout}">
+
+<head>
+    <title>[[#{authentication.login.headline}]]</title>
+    <style type="text/css">
+        body {
+            min-height: 100vh;
+            padding: 20px;
+            align-items: center;
+            justify-content: center;
+            /*
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            */
+        }
+
+        .login-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            max-width: 440px;
+            overflow: hidden;
+        }
+
+        .card-header {
+            /* background: #2980b9; */
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .card-body {
+            padding: 25px;
+        }
+
+        .form-control:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #2980b9, #2c3e50);
+        }
+
+        .autofill-link {
+            color: #3498db;
+            cursor: pointer;
+            text-decoration: none;
+            font-style: italic;
+        }
+
+        .autofill-link:hover {
+            text-decoration: underline;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 24px;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <div layout:fragment="content">
+        <div class="login-card mx-auto">
+            <div class="card-header">
+                <div class="logo">SecureApp</div>
+                <p class="mb-0 mt-2">Sign in to your account</p>
+            </div>
+            <div class="card-body">
+                <div th:replace="~{fragments/forms::globalErrors('authentication')}" />
+                <form th:action="${requestUri}" method="post">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100 mb-3">Sign In</button>
+
+                    <div class="row">
+                        <div class="col">
+                            <span
+                                hx-on:click="document.getElementById('email').value='a@a.com'; document.getElementById('password').value='123';"
+                                class="autofill-link">
+                                <i class="bi bi-key"></i> Applicant credentials
+                            </span>
+                        </div>
+                        <div class="col">
+                            <span
+                                hx-on:click="document.getElementById('email').value='admin@jb.com'; document.getElementById('password').value='123';"
+                                class="autofill-link">
+                                <i class="bi bi-key"></i> Admin credentials
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            window.setTimeout(function () {
+                $(".alert")
+                    .fadeTo(500, 0)
+                    .slideUp(500, function () {
+                        $(this).remove();
+                    });
+            }, 2000);
+        </script>
+    </div>
+</body>
+
+</html>
